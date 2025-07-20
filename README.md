@@ -1,16 +1,16 @@
 # Paywall 🛡️
 
-Simple payment reminder - makes websites fade out when payment is overdue.
+Recordatorio simple de pagos - hace que los sitios web se desvanezcan cuando el pago está vencido.
 
-> 📖 **¿Prefieres leer en español?** [Ver README en español](README.es.md)
+> 📖 **Prefer to read in English?** [View README in English](README.md)
 
-## Installation
+## Instalación
 
 ```bash
 npm install paywall
 ```
 
-## Quick Start
+## Inicio Rápido
 
 ```html
 <script src="node_modules/paywall/dist/paywall.min.js"></script>
@@ -22,23 +22,23 @@ npm install paywall
 </script>
 ```
 
-## Visual Effects
+## Efectos Visuales
 
-Paywall offers three different visual effects to remind users about overdue payments:
+Paywall ofrece tres efectos visuales diferentes para recordar a los usuarios sobre pagos vencidos:
 
-### 🎨 Gradient Effect (Default)
-Beautiful gradient overlay that intensifies over time.
+### 🎨 Efecto Gradiente (Por defecto)
+Hermoso overlay de gradiente que se intensifica con el tiempo.
 
 ```javascript
 new Paywall({
   dueDate: '2025-07-15',
   daysDeadline: 10
-  // Uses gradient effect by default
+  // Usa efecto gradiente por defecto
 });
 ```
 
-### 🔴 Solid Effect
-Solid color overlay that darkens gradually.
+### 🔴 Efecto Sólido
+Overlay de color sólido que se oscurece gradualmente.
 
 ```javascript
 new Paywall({
@@ -49,8 +49,8 @@ new Paywall({
 });
 ```
 
-### 🌫️ Fade Effect
-Simple body opacity reduction (original method).
+### 🌫️ Efecto Fade
+Reducción simple de la opacidad del body (método original).
 
 ```javascript
 new Paywall({
@@ -60,37 +60,37 @@ new Paywall({
 });
 ```
 
-## Configuration
+## Configuración
 
-| Option | Type | Required | Default | Description |
-|--------|------|----------|---------|-------------|
-| `dueDate` | String | ✅ Yes | - | Payment due date (YYYY-MM-DD) |
-| `daysDeadline` | Number | ❌ No | 60 | Days after which effect is maximum |
-| `effect` | String | ❌ No | 'gradient' | Effect type: 'gradient', 'solid', 'fade' |
-| `color` | String | ❌ No | '#ff0000' | Color for solid effect (hex or name) |
-| `gradientFrom` | String | ❌ No | '#ff0000' | Starting color for gradient |
-| `gradientTo` | String | ❌ No | '#000000' | Ending color for gradient |
+| Opción | Tipo | Requerido | Por Defecto | Descripción |
+|--------|------|-----------|-------------|-------------|
+| `dueDate` | String | ✅ Sí | - | Fecha de vencimiento del pago (YYYY-MM-DD) |
+| `daysDeadline` | Number | ❌ No | 60 | Días después de los cuales el efecto es máximo |
+| `effect` | String | ❌ No | 'gradient' | Tipo de efecto: 'gradient', 'solid', 'fade' |
+| `color` | String | ❌ No | '#ff0000' | Color para efecto sólido (hex o nombre) |
+| `gradientFrom` | String | ❌ No | '#ff0000' | Color inicial del gradiente |
+| `gradientTo` | String | ❌ No | '#000000' | Color final del gradiente |
 
-## How it works
+## Cómo funciona
 
-1. **Set Configuration:** Define your payment due date and deadline
-2. **Automatic Check:** Library checks if payment is overdue
-3. **Visual Effect:** Applies chosen effect based on days overdue
-4. **Gradual Intensification:** Effect becomes stronger over time
-5. **Maximum Impact:** At deadline, effect reaches full intensity
+1. **Configurar:** Define tu fecha de vencimiento y plazo
+2. **Verificación Automática:** La librería verifica si el pago está vencido
+3. **Efecto Visual:** Aplica el efecto elegido según los días de retraso
+4. **Intensificación Gradual:** El efecto se vuelve más fuerte con el tiempo
+5. **Impacto Máximo:** Al llegar al plazo, el efecto alcanza intensidad completa
 
-## Examples
+## Ejemplos
 
-### Basic Usage (Default Gradient)
+### Uso Básico (Gradiente por defecto)
 ```javascript
 new Paywall({
   dueDate: '2025-07-15',
   daysDeadline: 10
-  // Automatically uses gradient effect with default colors
+  // Automáticamente usa efecto gradiente con colores por defecto
 });
 ```
 
-### Custom Gradient Colors
+### Colores de Gradiente Personalizados
 ```javascript
 new Paywall({
   dueDate: '2025-07-15',
@@ -101,7 +101,7 @@ new Paywall({
 });
 ```
 
-### Blue Solid Overlay
+### Overlay Sólido Azul
 ```javascript
 new Paywall({
   dueDate: '2025-07-15',
@@ -111,7 +111,7 @@ new Paywall({
 });
 ```
 
-### Simple Fade
+### Fade Simple
 ```javascript
 new Paywall({
   dueDate: '2025-07-15',
@@ -120,48 +120,48 @@ new Paywall({
 });
 ```
 
-## Features
+## Características
 
-- 🚀 **Simple Setup** - Just include the script and configure
-- 🎨 **Multiple Effects** - Choose from gradient, solid, or fade effects
-- ⚡ **Automatic** - No manual intervention needed
-- 🎯 **Customizable** - Configure colors, dates, and deadlines
-- 📱 **Responsive** - Works on all devices and screen sizes
-- 🔒 **Lightweight** - Minimal file size, no dependencies
+- 🚀 **Configuración Simple** - Solo incluye el script y configura
+- 🎨 **Múltiples Efectos** - Elige entre gradiente, sólido o fade
+- ⚡ **Automático** - No requiere intervención manual
+- 🎯 **Personalizable** - Configura colores, fechas y plazos
+- 📱 **Responsivo** - Funciona en todos los dispositivos
+- 🔒 **Ligero** - Tamaño mínimo, sin dependencias
 
-## Use Cases
+## Casos de Uso
 
-- **Freelancers:** Ensure clients pay on time
-- **Agencies:** Protect against non-payment
-- **Developers:** Secure payment for web projects
-- **Consultants:** Maintain payment discipline
-- **Service Providers:** Automated payment reminders
+- **Freelancers:** Asegurar que los clientes paguen a tiempo
+- **Agencias:** Protegerse contra la falta de pago
+- **Desarrolladores:** Asegurar el pago de proyectos web
+- **Consultores:** Mantener disciplina de pagos
+- **Proveedores de Servicios:** Recordatorios automáticos de pago
 
-## Demo Pages
+## Páginas de Demo
 
-Check out the live demos to see each effect in action:
+Revisa los demos en vivo para ver cada efecto en acción:
 
-- 🏠 **[Simple Demo](examples/simple.html)** - Basic usage with gradient effect
-- 📖 **[Documentation](examples/info.html)** - Complete guide and API reference
-- 🎨 **[Gradient Demo](examples/gradient-effect.html)** - Beautiful gradient overlay
-- 🔴 **[Solid Demo](examples/solid-effect.html)** - Clean solid color overlay
-- 🌫️ **[Fade Demo](examples/fade-effect.html)** - Simple body opacity reduction
+- 🏠 **[Demo Simple](examples/simple.html)** - Uso básico con efecto gradiente
+- 📖 **[Documentación](examples/info.html)** - Guía completa y referencia de API
+- 🎨 **[Demo Gradiente](examples/gradient-effect.html)** - Hermoso overlay de gradiente
+- 🔴 **[Demo Sólido](examples/solid-effect.html)** - Overlay de color sólido limpio
+- 🌫️ **[Demo Fade](examples/fade-effect.html)** - Reducción simple de opacidad
 
-## Browser Support
+## Compatibilidad de Navegadores
 
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Edge (latest)
+- ✅ Chrome (última versión)
+- ✅ Firefox (última versión)
+- ✅ Safari (última versión)
+- ✅ Edge (última versión)
 - ✅ Internet Explorer 11+
 
-## Author
+## Autor
 
-**Paywall** was inspired by the original concept from [@kleampa](https://github.com/kleampa) and developed with improvements by [Alberto Guaman](https://github.com/GbrielGarcia) for npm publication.
+**Paywall** fue inspirado por el concepto original de [@kleampa](https://github.com/kleampa) y desarrollado con mejoras por [Alberto Guaman](https://github.com/GbrielGarcia) para publicación en npm.
 
-- **Original Concept:** [@kleampa](https://github.com/kleampa)
-- **Developer:** [Alberto Guaman](https://github.com/GbrielGarcia) - [Tinguar](https://tinguar.com) (Digital Agency)
+- **Concepto Original:** [@kleampa](https://github.com/kleampa)
+- **Desarrollador:** [Alberto Guaman](https://github.com/GbrielGarcia) - [Tinguar](https://tinguar.com) (Agencia Digital)
 
-## License
+## Licencia
 
 MIT 
