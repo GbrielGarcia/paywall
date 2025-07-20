@@ -10,6 +10,8 @@ Simple payment reminder - makes websites fade out when payment is overdue.
 npm install paywall-js
 ```
 
+📦 **Package:** [paywall-js on npm](https://www.npmjs.com/package/paywall-js)
+
 ## Quick Start
 
 ```html

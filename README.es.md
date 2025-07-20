@@ -10,6 +10,8 @@ Recordatorio simple de pagos - hace que los sitios web se desvanezcan cuando el 
 npm install paywall-js
 ```
 
+📦 **Paquete:** [paywall-js en npm](https://www.npmjs.com/package/paywall-js)
+
 ## Inicio Rápido
 
 ```html
