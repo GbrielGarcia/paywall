@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paywall.js - Simple Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .code {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .demo-box {
+            background: #667eea;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .demo-box h2 {
+            margin-bottom: 10px;
+        }
+
+        .demo-box p {
+            opacity: 0.9;
+        }
+
+        .nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .nav a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        .nav a:hover {
+            background: #5a67d8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ Paywall.js - CDN Demo</h1>
+
+        <div class="nav">
+            <a href="simple.html">🏠 Simple</a>
+            <a href="info.html">📖 Docs</a>
+            <a href="production-cdn.html">🏭 CDN Demo</a>
+            <a href="production-npm.html">📦 npm Demo</a>
+            <a href="gradient-effect.html">🎨 Gradient</a>
+            <a href="solid-effect.html">🔴 Solid</a>
+            <a href="fade-effect.html">🌫️ Fade</a>
+        </div>
+
+        <div class="content">
+            <h2>CDN Implementation</h2>
+            <p>This page shows how to use paywall-js with CDN:</p>
+            
+            <div class="code">
+&lt;script src="https://unpkg.com/paywall-js@1.0.0/dist/paywall.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+new Paywall({
+    dueDate: '2025-07-15',
+    daysDeadline: 10
+});
+&lt;/script&gt;
+            </div>
+        </div>
+
+        <div class="demo-box">
+            <h2>Demo Content</h2>
+            <p>This is a sample website content. If payment is overdue, you'll see the paywall effect applied to this page.</p>
+        </div>
+
+        <div class="content">
+            <h2>More Content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
+    <!-- Paywall.js Implementation -->
+    <script src="https://unpkg.com/paywall-js@1.0.0/dist/paywall.min.js"></script>
+    <script>
+        new Paywall({
+            dueDate: '2025-07-15',
+            daysDeadline: 10
+        });
+    </script>
+</body>
+</html> 

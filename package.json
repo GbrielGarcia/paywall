@@ -1,5 +1,5 @@
 {
-  "name": "paywall",
+  "name": "paywall-js",
   "version": "1.0.0",
   "type": "module",
   "description": "Simple payment reminder - makes websites fade out when payment is overdue",
@@ -23,5 +23,8 @@
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.6.1"
+  },
+  "dependencies": {
+    "paywall-js": "^1.0.0"
   }
 }

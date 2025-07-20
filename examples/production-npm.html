@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - Home (npm install)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .hero {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .code-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-section h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .code {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">MyWebsite</div>
+                <div class="nav-links">
+                    <a href="simple.html">🏠 Simple</a>
+                    <a href="info.html">📖 Docs</a>
+                    <a href="production-cdn.html">🏭 CDN Demo</a>
+                    <a href="production-npm.html">📦 npm Demo</a>
+                    <a href="gradient-effect.html">🎨 Gradient</a>
+                    <a href="solid-effect.html">🔴 Solid</a>
+                    <a href="fade-effect.html">🌫️ Fade</a>
+                </div>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Welcome to My Website</h1>
+            <p>Professional web development and digital solutions for your business</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </section>
+
+        <div class="code-section">
+            <h3>📦 npm install Implementation</h3>
+            <div class="code">
+$ npm install paywall-js
+
+&lt;script src="node_modules/paywall-js/dist/paywall.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+new Paywall({
+    dueDate: '2025-07-15',
+    daysDeadline: 10
+});
+&lt;/script&gt;
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>🚀 Web Development</h3>
+                <p>Custom websites and web applications built with modern technologies and best practices.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📱 Mobile Apps</h3>
+                <p>Native and cross-platform mobile applications for iOS and Android devices.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎨 UI/UX Design</h3>
+                <p>Beautiful and intuitive user interfaces designed to enhance user experience.</p>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>🔧 Maintenance</h3>
+                <p>Ongoing support and maintenance to keep your digital products running smoothly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Analytics</h3>
+                <p>Data-driven insights to help you understand your users and improve performance.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🛡️ Security</h3>
+                <p>Robust security measures to protect your data and ensure compliance.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 MyWebsite. All rights reserved. | Professional web development services.</p>
+        </footer>
+    </div>
+
+    <!-- Paywall.js Implementation from npm install -->
+    <script src="node_modules/paywall-js/dist/paywall.min.js"></script>
+    <script>
+        new Paywall({
+            dueDate: '2025-07-15',
+            daysDeadline: 10
+        });
+    </script>
+</body>
+</html> 
