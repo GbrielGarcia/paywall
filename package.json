@@ -1,0 +1,27 @@
+{
+  "name": "paywall",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Simple payment reminder - makes websites fade out when payment is overdue",
+  "main": "dist/paywall.min.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "keywords": [
+    "payment",
+    "paywall",
+    "overdue",
+    "reminder",
+    "fade",
+    "gradient",
+    "overlay",
+    "protection"
+  ],
+  "author": "Alberto Guaman <@GbrielGarcia>",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.6.1"
+  }
+}

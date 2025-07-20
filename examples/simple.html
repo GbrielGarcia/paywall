@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Protection - Simple Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            min-height: 100vh;
+            color: #ecf0f1;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            color: #2c3e50;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #e74c3c;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .demo-section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+        }
+        
+        .demo-section h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+            border-left: 4px solid #e74c3c;
+            font-size: 0.9em;
+        }
+        
+        .nav-links {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #ecf0f1;
+            border-radius: 12px;
+        }
+        
+        .nav-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 12px 20px;
+            border-radius: 25px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-links a:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .effect-preview {
+            width: 100%;
+            height: 80px;
+            border-radius: 12px;
+            margin: 20px 0;
+            background: linear-gradient(135deg, #ff0000 0%, #000000 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        ul {
+            color: #2c3e50;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        strong {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ Paywall</h1>
+        <p class="subtitle">Simple payment reminder - makes websites fade out when payment is overdue</p>
+        
+        <div class="nav-links">
+            <a href="info.html">📖 Documentation</a>
+            <a href="gradient-effect.html">🎨 Gradient Demo</a>
+            <a href="solid-effect.html">🔴 Solid Demo</a>
+            <a href="fade-effect.html">🌫️ Fade Demo</a>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Simple Usage</h2>
+            <p>This page shows the default gradient effect in action.</p>
+            
+            <div class="effect-preview">
+                Gradient Effect Active
+            </div>
+            
+            <div class="code-block">
+&lt;script src="node_modules/payment-protection/dist/payment-protection.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+new PaymentProtection({
+    dueDate: '2025-07-15',
+    daysDeadline: 10
+});
+&lt;/script&gt;
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Configuration</h2>
+            <ul>
+                <li><strong>dueDate:</strong> Payment due date (YYYY-MM-DD)</li>
+                <li><strong>daysDeadline:</strong> Days after which effect is maximum</li>
+                <li><strong>effect:</strong> 'gradient' (default), 'solid', 'fade'</li>
+            </ul>
+        </div>
+        
+        <div class="demo-section">
+            <h2>How it works</h2>
+            <ul>
+                <li>If payment is overdue, effect appears</li>
+                <li>Effect intensifies as days pass</li>
+                <li>After deadline, effect is maximum</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Using the package -->
+    <script src="../dist/paywall.min.js"></script>
+    <script>
+        // Simple demo - gradient effect
+        new Paywall({
+            dueDate: '2025-07-15',
+            daysDeadline: 10
+        });
+    </script>
+</body>
+</html> 
